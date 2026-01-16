@@ -174,7 +174,7 @@
   function downloadCSV(data) {
     data.sort((a, b) => new Date(a.dateDebut) - new Date(b.dateDebut));
 
-    let csv = 'debut;fin;kW\n';
+    let csv = 'debut;fin;kWh\n';
     data.forEach((row) => {
       csv += `${row.dateDebut};${row.dateFin};"${row.valeur.toString().replace('.', ',')}"\n`;
     });
